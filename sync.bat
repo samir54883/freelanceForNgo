@@ -2,7 +2,7 @@
 cd "C:\Users\KIIT\WebstormProjects\ngo"
 
 :: Set the branch name you're working on
-set BRANCH_NAME=DEV
+set BRANCH_NAME=maestro
 
 :: Checkout the branch
 git checkout %BRANCH_NAME%

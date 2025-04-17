@@ -1,11 +1,23 @@
-* { box-sizing: border-box; }
+@font-face {
+    font-family: 'Ramillas';
+    src: url('./assets/TT Ramillas Trial Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
     overflow-y: auto;
+    background-color: white !important; /* background remains white */
 }
 
+/* === Slideshow Section === */
 .slideshow-container {
     position: relative;
     width: 100%;
@@ -23,9 +35,10 @@ body {
     height: auto;
     display: block;
 }
+
 .slideshow-caption {
     position: absolute;
-    bottom: 170px; /* places it above the buttons */
+    bottom: 170px;
     right: 7.5%;
     max-width: 25%;
     background-color: white;
@@ -36,6 +49,7 @@ body {
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     text-align: left;
 }
+
 .caption-link {
     display: inline-block;
     margin-top: 12px;
@@ -49,13 +63,13 @@ body {
 .caption-link::after {
     content: "";
     display: block;
-    margin-top: 8px; /* space between text and line */
+    margin-top: 8px;
     width: 100%;
-    height: 4px; /* thickness of the line */
+    height: 4px;
     background-color: #1F7D53;
 }
 
-.whiteSpace{
+.whiteSpace {
     height: 500px;
 }
 
@@ -67,23 +81,23 @@ body {
     max-width: 90%;
     width: max-content;
     display: flex;
-    gap: 10px; /* This adds space between buttons */
+    gap: 10px;
     white-space: nowrap;
     overflow-x: auto;
     background-color: rgba(0, 0, 0, 0.4);
     padding: 10px;
+
     border-radius: 12px;
 }
 
 .slideshow-buttons::-webkit-scrollbar {
-    height: 6px;
+    height: 0px;
 }
 
 .slideshow-buttons::-webkit-scrollbar-thumb {
     background-color: #888;
     border-radius: 3px;
 }
-
 
 .slideshow-buttons button {
     padding: 10px 16px;
@@ -100,3 +114,94 @@ body {
     background-color: #1F7D53;
     color: white;
 }
+
+/* === Font Class === */
+.ramillas-font {
+    font-family: 'Ramillas', serif;
+}
+
+/* === Home About Section === */
+.home-about-section {
+    background-color: white;
+    padding: 60px;
+    text-align: center;
+    margin: auto;
+}
+
+.home-about-section h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+
+
+
+.home-about-section p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-top: 20px;
+
+}
+
+.read-more-wrapper {
+    margin-top: 30px;
+}
+
+.read-more-button {
+    padding: 12px 30px;
+    border: 2px solid black;
+    background: white;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 14px;
+    border-radius: 6px;
+}
+
+.read-more-button:hover {
+    padding: 12px 30px;
+    border: 2px solid #1F7D53;
+    background: #1F7D53;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 14px;
+    border-radius: 6px;
+}
+
+/* === Impact Section === */
+.home-impact {
+    background-color: #f9f9f9;
+    padding: 60px;
+    text-align: center;
+}
+
+.home-impact h2 {
+    font-size: 48px;
+    margin-bottom: 30px;
+}
+
+.impact-metrics {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+/* === Gap Between Impact Numbers (Desktop & Mobile) === */
+.impact-metrics > div {
+    min-width: 250px;
+    margin-bottom: 30px; /* Adds spacing between numbers */
+}
+
+.big-number {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+

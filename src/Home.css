@@ -4,6 +4,12 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'Ramillas ExtraBold';
+    src: url('./assets/TT Ramillas Trial ExtraBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 * {
     box-sizing: border-box;
@@ -135,7 +141,18 @@ body {
     display: inline-block;
 }
 
+.home-about-section h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    width: 20%;
+    height: 4px; /* Thickness of the underline */
+    background-color: #1F7D53; /* Color of the underline */
+    border-radius: 2px;
 
+}
 
 
 .home-about-section p {
@@ -200,8 +217,16 @@ body {
 }
 
 .big-number {
-    font-size: 48px;
+    font-size: 60px;
     font-weight: bold;
+    font-family: 'Ramillas ExtraBold', serif;
     margin-bottom: 8px;
+    color: #1F7D53;
 }
+.impact-description {
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+    max-width: 300px;
+}
+
 

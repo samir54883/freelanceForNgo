@@ -134,14 +134,23 @@ function Home() {
                     <div>
                         <div className="big-number">{counts.years}+</div>
                         <div>Years of Service</div>
+                        <p className="impact-description">
+                            A legacy of dedication, growth, and unwavering commitment to our mission.
+                        </p>
                     </div>
                     <div>
                         <div className="big-number">{counts.lives}+</div>
                         <div>Lives Impacted</div>
+                        <p className="impact-description">
+                            Transforming communities, one story at a time.
+                        </p>
                     </div>
                     <div>
                         <div className="big-number">{counts.programs}+</div>
-                        <div>Programs Conducted</div>
+                        <div>Initiatives Conducted</div>
+                        <p className="impact-description">
+                            Empowering change through meaningful, action-driven initiatives.
+                        </p>
                     </div>
                 </div>
             </section>

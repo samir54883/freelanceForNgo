@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Key Activities - Mehta & Mukhtar</title>
+<style>
+    @font-face {
+    font-family: 'Ramillas';
+    src: url('TT Ramillas Trial Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+    body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: white;
+    color: #333;
+    height: 100vh;
+    overflow: auto;
+    margin-top: 50px;
+    margin: 4rem;
+    display: flex;
+}
+
+    .left-panel {
+    width: 50%;
+    background: linear-gradient(135deg, #1F7D53, #146342);
+    padding: 30px 15px 30px 30px;
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    box-shadow: 5px 0 20px rgba(0, 0, 0, 0.1);
+    color: #fff;
+}
+
+    .header-with-arrows {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+
+    .header-title {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    font-family: 'Ramillas', serif;
+
+}
+
+    .arrow-buttons-inline {
+    display: flex;
+    gap: 10px;
+    margin-left: 20px;
+}
+
+    .arrow-button {
+    width: 36px;
+    height: 36px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .arrow-button:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+    .scrollable-cards {
+    scroll-snap-type: y mandatory;
+    overflow-y: auto;
+    flex-grow: 1;
+    padding-right: 15px;
+    padding-top: 10px;
+}
+    .activity-card {
+    scroll-snap-align: start;
+}
+    .scrollable-cards {
+    -webkit-overflow-scrolling: touch;
+}
+
+
+    .scrollable-cards::-webkit-scrollbar {
+    width: 6px;
+}
+
+    .scrollable-cards::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+}
+
+    .activities-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+    #scrollDown{
+    transform: rotate(180deg);
+}
+    .activity-card {
+    background: rgba(255, 255, 255);
+    color: #222;
+    padding: 20px 24px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-bottom: 4px solid black;
+}
+
+    .activity-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5);
+    border-bottom: 6px solid black;
+
+}
+
+    .activity-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: black;
+    display: inline-block;
+    position: relative;
+}
+    .activity-card h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Adjust this to set the distance from the text */
+    width: 100%;
+    height: 3px;
+    background-color: #1F7D53;
+}
+    .activity-card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #444;
+}
+
+    .right-panel {
+    width: 50%;
+    background-color: white;
+    height: 100vh;
+    border-radius: 0 12px 12px 0;
+}
+
+    @media (max-width: 768px) {
+    body {
+    flex-direction: column;
+}
+
+    .left-panel, .right-panel {
+    width: 100%;
+    height: auto;
+}
+
+    .right-panel {
+    display: none;
+}
+}
+</style>
+</head>
+<body>
+
+<!-- Left Panel -->
+<div class="left-panel">
+    <div class="header-with-arrows">
+        <div class="header-title">
+            Our Key Activities
+            <div class="arrow-buttons-inline">
+                <button class="arrow-button" id="scrollUp">&#8682;</button>
+                <button class="arrow-button" id="scrollDown">&#8682;</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="scrollable-cards" id="scrollContainer">
+        <div class="activities-grid">
+            <div class="activity-card">
+                <h3>Road Safety & Awareness</h3>
+                <p>Organized helmet distributions and traffic drives at major intersections before state campaigns began.</p>
+            </div>
+            <div class="activity-card">
+                <h3>Education Support</h3>
+                <p>Supplied school essentials to prevent dropout among underserved children, especially girls.</p>
+            </div>
+            <div class="activity-card">
+                <h3>Child Health Camps</h3>
+                <p>Free medical checkups and medicines for children in underprivileged areas.</p>
+            </div>
+            <div class="activity-card">
+                <h3> National Integration</h3>
+                <p>Hosted events promoting peace among diverse religions and communities.</p>
+            </div>
+            <div class="activity-card">
+                <h3>Clothing Drives</h3>
+                <p>Blanket and garment distribution for the homeless during winter months.</p>
+            </div>
+            <div class="activity-card">
+                <h3>Elder Support</h3>
+                <p>Felicitation of senior citizens and health-focused programs for elder care.</p>
+            </div>
+            <div class="activity-card">
+                <h3> Adult Health Camps</h3>
+                <p>Free screenings for BP, diabetes, and general health for economically weak sections.</p>
+            </div>
+            <div class="activity-card">
+                <h3>Condolence Meetings</h3>
+                <p>Memorials held for poets, teachers, and social leaders with community participation.</p>
+            </div>
+            <div class="activity-card">
+                <h3>Police-Public Harmony</h3>
+                <p>Felicitating police officers to strengthen community respect for law enforcement.</p>
+            </div>
+            <div class="activity-card">
+                <h3>Anti-Drug Campaigns</h3>
+                <p>Awareness drives, rallies, and school programs focused on substance abuse prevention.</p>
+            </div>
+            <div class="activity-card">
+                <h3>Youth Engagement</h3>
+                <p>Organized drawing contests and sports events to develop creativity and teamwork.</p>
+            </div>
+            <div class="activity-card">
+                <h3>Environment Action</h3>
+                <p>Cleanliness drives and tree plantation in collaboration with Kolkata Police.</p>
+            </div>
+            <div class="activity-card">
+                <h3>Govt. Recognition</h3>
+                <p>A ₹5 postage stamp by India Post issued in honor of Mehta & Mukhtar in 2018.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Right Panel -->
+<div class="right-panel">
+    <!-- Placeholder for hero/other content -->
+</div>
+
+<script>
+    const scrollContainer = document.getElementById('scrollContainer');
+    const scrollAmount = 190; // adjust based on card height
+
+    document.getElementById('scrollUp').addEventListener('click', () => {
+    scrollContainer.scrollBy({
+        top: -scrollAmount,
+        behavior: 'smooth'
+    });
+});
+
+    document.getElementById('scrollDown').addEventListener('click', () => {
+    scrollContainer.scrollBy({
+        top: scrollAmount,
+        behavior: 'smooth'
+    });
+});
+
+</script>
+</body>
+</html>
